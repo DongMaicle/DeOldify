@@ -19,7 +19,7 @@ from model import Generator
 parser = argparse.ArgumentParser()
 parser.add_argument('--video_path', type=str, required=True, help='path to the input video')
 parser.add_argument('--output_path', type=str, required=True, help='path to save the output video')
-parser.add_argument('--model_path', type=str, default='models/la_muse.pth', help='path to the pretrained model')
+parser.add_argument('--model_path', type=str, default='models/ColorizeVideo_gen.pth', help='path to the pretrained model')
 args = parser.parse_args()
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
