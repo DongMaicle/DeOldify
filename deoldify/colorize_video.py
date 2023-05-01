@@ -10,7 +10,7 @@ from model import Generator
 parser = argparse.ArgumentParser()
 parser.add_argument('--video_path', type=str, required=True, help='path to the input video')
 parser.add_argument('--output_path', type=str, required=True, help='path to save the output video')
-parser.add_argument('--model_path', type=str, default='models/ColorizeVideo_gen.pth', help='path to the pretrained model')
+parser.add_argument('--model_path', type=str, default='/content/DeOldify/models/ColorizeVideo_gen.pth', help='path to the pretrained model')
 parser.add_argument('--render_factor', type=int, default=21, help='render factor for the model, range 5-40')
 args = parser.parse_args()
 
