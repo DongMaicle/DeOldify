@@ -11,11 +11,11 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--video_path', type=str, required=True, help='path to the input video')
 parser.add_argument('--output_path', type=str, required=True, help='path to save the output video')
 parser.add_argument('--model_path', type=str, default='models/ColorizeVideo_gen.pth', help='path to the pretrained model')
-parser.add_argument('--render_factor', type=int, default=21, help='render factor for the model, range 7-40')
+parser.add_argument('--render_factor', type=int, default=21, help='render factor for the model, range 5-40')
 args = parser.parse_args()
 
-if not 7 <= args.render_factor <= 40:
-    raise ValueError("Render factor should be in the range 7-40")
+if not 5 <= args.render_factor <= 40:
+    raise ValueError("Render factor should be in the range 5-40")
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
